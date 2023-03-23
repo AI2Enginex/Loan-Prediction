@@ -26,7 +26,7 @@ train_x , test_x , train_y , test_y = param.training_features()
 
 
 train_x_scl = StandardScaler().fit_transform(train_x)
-test_x_scl = StandardScaler().fit_transform(test_x)
+test_x_scl = StandardScaler().transform(test_x)
 
 def build_model(hp):
     model = Sequential()
